@@ -18,11 +18,11 @@
         /*font-family: Handwriting;*/
         display: flex;
         /*justify-content: center;*/
-        margin-left: 100px;
+        margin-left:1000px;
         height: 100vh;
         overflow: hidden;
         /*nếu chiều cao k đủ chứa thì phần dư sẽ đc dấu đi*/
-        background: url("https://hanoispiritofplace.com/wp-content/uploads/2016/06/hinh-anh-xe-lamborghini-dep-nhat-42.jpg");
+        background: url("https://thichlaviet.com/wp-content/uploads/2018/04/tai-game-Need-for-Speed-2.jpg");
         background-size: cover;
         /*cover:co vừa với ptu chứa bị cắt đi nếu k vừa
         contain:chỉ co vừa với ptu chứa*/
@@ -248,21 +248,126 @@
         setTimeout(function () {
             element.classList.add("animate");
         }, 10000);
+        // setTimeout(function () {
+        //     applause.play();
+        //     setTimeout(function () {
+        //         Swal.fire({
+        //             title: 'Yeah....',
+        //             html:   SelectedItem ,
+        //             imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHYR88Ln4pfz14yZ431oSanvK17LI_EMb69g&usqp=CAU",
+        //             imageWidth: 450,
+        //             imageHeight: 250,
+        //             imageAlt: 'Custom image',
+        //
+        //         })
+        //     }, 10500)
+        // })
         setTimeout(function () {
             applause.play();
-            setTimeout(function () {
-                Swal.fire({
-                    title: 'Yeah....',
-                    html:   SelectedItem ,
-                    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHYR88Ln4pfz14yZ431oSanvK17LI_EMb69g&usqp=CAU",
-                    imageWidth: 450,
-                    imageHeight: 250,
-                    imageAlt: 'Custom image',
+            if (MB.includes(Hasil[0])){
+                setTimeout(function () {
+                    Swal.fire({
+                        title: 'Yeah....',
+                        html:   SelectedItem ,
+                        imageUrl: "img/maybach.jpeg",
+                        imageWidth: 450,
+                        imageHeight: 250,
+                        imageAlt: 'Custom image',
 
-                })
-            }, 10500)
-        })
-    }
+                    })
+                }, 10500)
+            }else if (AM.includes(Hasil[0])){
+                    setTimeout(function () {
+                        Swal.fire({
+                            title: 'Yeah....',
+                            html:   SelectedItem ,
+                            imageUrl: "img/AM.jpg",
+                            imageWidth: 450,
+                            imageHeight: 250,
+                            imageAlt: 'Custom image',
+
+                        })
+                    }, 10500)
+
+            }else if (BT.includes(Hasil[0])){
+                    setTimeout(function () {
+                        Swal.fire({
+                            title: 'oh....',
+                            html:   SelectedItem ,
+                            imageUrl: "img/kth.jpg",
+                            imageWidth: 450,
+                            imageHeight: 250,
+                            imageAlt: 'Custom image',
+
+                        })
+                    }, 10500)
+
+            }else if (PS.includes(Hasil[0])){
+                    setTimeout(function () {
+                        Swal.fire({
+                            title: 'Yeah....',
+                            html:   SelectedItem ,
+                            imageUrl: "img/poscher.jpg",
+                            imageWidth: 450,
+                            imageHeight: 250,
+                            imageAlt: 'Custom image',
+
+                        })
+                    }, 10500)
+
+            }else if (FR.includes(Hasil[0])){
+                    setTimeout(function () {
+                        Swal.fire({
+                            title: 'Yeah....',
+                            html:   SelectedItem ,
+                            imageUrl: "img/fer.jpg",
+                            imageWidth: 450,
+                            imageHeight: 250,
+                            imageAlt: 'Custom image',
+
+                        })
+                    }, 10500)
+
+            }else if (LB.includes(Hasil[0])){
+                    setTimeout(function () {
+                        Swal.fire({
+                            title: 'Yeah....',
+                            html:   SelectedItem ,
+                            imageUrl: "img/lambo.jpg",
+                            imageWidth: 450,
+                            imageHeight: 250,
+                            imageAlt: 'Custom image',
+
+                        })
+                    }, 10500)
+
+            }else if (LX.includes(Hasil[0])){
+                    setTimeout(function () {
+                        Swal.fire({
+                            title: 'Yeah....',
+                            html:   SelectedItem ,
+                            imageUrl: "img/lexus.jpg",
+                            imageWidth: 450,
+                            imageHeight: 250,
+                            imageAlt: 'Custom image',
+
+                        })
+                    }, 10500)
+
+            }else if (AD.includes(Hasil[0])) {
+                    setTimeout(function () {
+                        Swal.fire({
+                            title: 'Yeah....',
+                            html:   SelectedItem ,
+                            imageUrl: "img/audi.jpg",
+                            imageWidth: 450,
+                            imageHeight: 300,
+                            imageAlt: 'Custom image',
+
+                        })
+                    }, 10500)
+                }
+    })}
 
 </script>
 </body>
