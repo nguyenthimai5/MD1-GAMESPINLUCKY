@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="67f7f8f9-51e6-423a-a599-9e758c266e2d" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2EwTU0MmrLuyB675pHdRc7AbWdj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/MD1/GIT/vong quay/sound&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MD1\GIT\vong quay\sound" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\MD1\GIT\vong quay\sound" />
+      <recent name="D:\MD1\GIT\vong quay\img" />
+      <recent name="D:\MD1\GIT\vong quay\amthanh" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="67f7f8f9-51e6-423a-a599-9e758c266e2d" name="Changes" comment="" />
+      <created>1663505658906</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663505658906</updated>
+      <workItem from="1663505660102" duration="7428000" />
+      <workItem from="1663549333686" duration="13116000" />
+      <workItem from="1663562640289" duration="31000" />
+      <workItem from="1663562724666" duration="8190000" />
+      <workItem from="1663577554145" duration="10000" />
+      <workItem from="1663577575266" duration="26000" />
+      <workItem from="1663577615668" duration="27000" />
+      <workItem from="1663577694442" duration="373000" />
+      <workItem from="1663578085082" duration="231000" />
+      <workItem from="1663578576976" duration="400000" />
+      <workItem from="1663578992495" duration="81000" />
+      <workItem from="1663579108516" duration="250000" />
+      <workItem from="1663579370030" duration="6000" />
+      <workItem from="1663579388362" duration="24000" />
+      <workItem from="1663579479646" duration="46000" />
+      <workItem from="1663579537570" duration="495000" />
+      <workItem from="1663580222661" duration="180000" />
+      <workItem from="1663580472730" duration="24000" />
+      <workItem from="1663580514270" duration="469000" />
+      <workItem from="1663581086737" duration="10969000" />
+      <workItem from="1663635104096" duration="6699000" />
+      <workItem from="1663642378034" duration="21455000" />
+      <workItem from="1663720899001" duration="12365000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

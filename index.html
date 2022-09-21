@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="VongQuay.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        /*outline: none;*/
+    }
+
+    body {
+        /*font-family: Handwriting;*/
+        display: flex;
+        /*justify-content: center;*/
+        margin-left: 100px;
+        height: 100vh;
+        overflow: hidden;
+        /*nếu chiều cao k đủ chứa thì phần dư sẽ đc dấu đi*/
+        background: url("https://hanoispiritofplace.com/wp-content/uploads/2016/06/hinh-anh-xe-lamborghini-dep-nhat-42.jpg");
+        background-size: cover;
+        /*cover:co vừa với ptu chứa bị cắt đi nếu k vừa
+        contain:chỉ co vừa với ptu chứa*/
+        background-position: center;
+    /*    làm cho hình nền ở giữa*/
+    }
+
+    .maninbox {
+        position: relative;
+        /*không cho phép các tp khác chèn lên*/
+        width: 500px;
+        height: 500px;
+        margin-top: 50px;
+    }
+
+    .maninbox:after {
+        position: absolute;
+        content: "";
+        /*thêm nội dung trong ngoặc*/
+        width: 32px;
+        height: 32px;
+        background: url("img/muiten.png") no-repeat;
+        /*không lặp lại hình*/
+        background-size: 32px;
+        right: -30px;
+        top: 50%;
+        transform: translate(-50%);
+    /*    dịch chuyển một vật2d*/
+    }
+    /*hiện mũi tên*/
+    .box {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 50%;
+        border: 10px solid dimgray;
+        overflow: hidden;
+        /*ẩn phần tràn */
+        /**/
+        transition: all ease 9s;
+    /*    điều kiển tốc độ của vòng quay*/
+    }
+
+    span {
+        width: 50%;
+        height: 50%;
+        display: inline-block;
+        /*cho phép thiết lập chiều rộng và cao của pt còn inline thì không*/
+        position: absolute;
+    }
+
+    .span1 {
+        clip-path: polygon(0 92%, 100% 50%, 0 8%);
+        background-color: slategrey;
+        top: 120px;
+        left: 0;
+    }
+
+    .span2 {
+        clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+        background-color: darkgray;
+        top: 120px;
+        right: 0;
+    }
+
+    .span3 {
+        clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+        background-color: dimgray;
+        bottom: 0;
+        left: 120px;
+    }
+
+    .span4 {
+        clip-path: polygon(50% 100%, 92% 0, 8% 0);
+        background-color: gray;
+        top: 0;
+        left: 120px;
+    }
+
+    .box2 {
+        width: 100%;
+        height: 100%;
+        transform: rotate(-135deg);
+    }
+
+    span b {
+        width: 65px;
+        height: 65px;
+        line-height: 65px;
+        /*khoảng cách giữ các dòng*/
+        border-radius: 50%;
+        font-size: 20px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    /* dịch chuyển một vật theo chiều X và Y   */
+    }
+
+    .spin {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        border: 4px solid gray;
+        background-color: lightgray;
+        box-shadow: 0 5px 30px #000;
+        font-weight: bold;
+        /*độ đậm của phông chữ*/
+        font-size: 22px;
+        cursor: pointer;
+        z-index: 1000;
+    /*    độ cao của nút nhấn*/
+    }
+
+    .spin:active{
+        width: 70px;
+        height: 70px;
+        font-size: 20px;
+    }
+
+    .maninbox.animate:after {
+        animation: animateArrow 0.5s ease infinite;
+    /*cho ảnh di chuyển*/
+    }
+    audio {
+        display: none;
+    }
+
+    @keyframes animateArrow {
+        50% {
+            right: -50px;
+        }
+    }
+</style>
+<body>
+<div class="maninbox" id="mainbox">
+    <div class="box" id="box">
+        <div class="box1">
+            <span id="1" class="span1"><b>MayBach</b></span>
+            <span id="2" class="span2"><b>AstonMartin.</b></span>
+            <span id="3" class="span3"><b>Lexus.</b></span>
+            <span id="4" class="span4"><b>Porsche</b></span>
+        </div>
+        <div class="box2">
+            <span id="5" class="span1"><b> Mất xe rồi</b></span>
+            <span id="6" class="span2"><b>Lamborghini.</b></span>
+            <span id="7" class="span3"><b>Ferrari.</b></span>
+            <span id="8" class="span4"><b>AuDi</b></span>
+        </div>
+    </div>
+    <button class="spin" onclick="quay()">Spin</button>
+</div>
+<audio controls="controls"
+       id="applause"
+       src="http://jadict.net/sites/default/files/clock-turning-sound-effect-585359572.mp3"
+       type="audion/mp3"></audio>
+<audio controls="controls"
+       id="wheel"
+       src="http://jadict.net/sites/default/files/clock-turning-sound-effect-585359572.mp3"
+       type="audion/mp3"></audio>
+
+<script>
+    function shuffle(array) {
+        var currentIndex = array.length,
+
+            randomIndex;
+
+        while (0 !== currentIndex) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            console.log("rd----",randomIndex)
+            currentIndex--;
+            [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex],
+                array[currentIndex],
+            ];
+        }
+        console.log("c1111===", currentIndex);
+        console.log("ả11===", array)
+        return array;
+
+    }
+
+    function quay() {
+        wheel.play();
+        const box = document.getElementById("box");
+        const element = document.getElementById("mainbox");
+        let SelectedItem = "";
+        let MB = shuffle([1630, 1990, 2350]);//d
+        let BT = shuffle([1770, 2130, 2490]);
+        let AM = shuffle([1810, 2170, 2530]);//d
+        let PS = shuffle([1890, 2250, 2610]);//d
+        let FR = shuffle([1850, 2210, 2570])//d
+        let LX = shuffle([1730, 2090, 2450]);
+        let LB = shuffle([1570, 1930, 2290]);
+        let AD = shuffle([1670, 2030, 2390]);//d
+        let Hasil = shuffle([
+            MB[0],
+            BT[0],
+            AM[0],
+            PS[0],
+            FR[0],
+            LX[0],
+            LB[0],
+            AD[0],
+        ]);
+        console.log("hasil=====", Hasil)
+        if (MB.includes(Hasil[0])) SelectedItem = "MayBach đã thuộc về bạn";
+        if (AM.includes(Hasil[0])) SelectedItem = "Aston Martin đã có chủ ";
+        if (BT.includes(Hasil[0])) SelectedItem = "Thôi không có xe lấy KTH vậy";
+        if (PS.includes(Hasil[0])) SelectedItem = " Có xe Porsche rồi đi cưới Mạc Cảnh Thâm thoai ";
+        if (FR.includes(Hasil[0])) SelectedItem = "Em có Ferrari rồi chờ em Tề Mạc à";
+        if (LB.includes(Hasil[0])) SelectedItem = "Lên Lamborghini thôi JK à";
+        if (LX.includes(Hasil[0])) SelectedItem = "Lexus cuối cùng cũng  chờ được em rước về";
+        if (AD.includes(Hasil[0])) SelectedItem = "AuDi chủ sở hữu vợ của Bá tước Nam Dương";
+        box.style.setProperty("transition", "all ease 9s");
+        box.style.transform = "rotate(" + Hasil[0] + "deg)";
+        element.classList.remove("animate");
+        setTimeout(function () {
+            element.classList.add("animate");
+        }, 10000);
+        setTimeout(function () {
+            applause.play();
+            setTimeout(function () {
+                Swal.fire({
+                    title: 'Yeah....',
+                    html:   SelectedItem ,
+                    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHYR88Ln4pfz14yZ431oSanvK17LI_EMb69g&usqp=CAU",
+                    imageWidth: 450,
+                    imageHeight: 250,
+                    imageAlt: 'Custom image',
+
+                })
+            }, 10500)
+        })
+    }
+
+</script>
+</body>
+</html>
