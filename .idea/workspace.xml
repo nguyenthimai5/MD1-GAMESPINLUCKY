@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67f7f8f9-51e6-423a-a599-9e758c266e2d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/img/AM.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/audi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/fer.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/kth.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/lambo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/lexus.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/maybach.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/poscher.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -38,17 +30,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/MD1/GIT/vong quay/sound",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/MD1/GIT/vong quay/sound&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\MD1\GIT\vong quay\sound" />
@@ -89,7 +81,8 @@
       <workItem from="1663581086737" duration="10969000" />
       <workItem from="1663635104096" duration="6699000" />
       <workItem from="1663642378034" duration="21455000" />
-      <workItem from="1663720899001" duration="18531000" />
+      <workItem from="1663720899001" duration="25663000" />
+      <workItem from="1663766478246" duration="3463000" />
     </task>
     <servers />
   </component>
